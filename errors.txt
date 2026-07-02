@@ -1,0 +1,6 @@
+"write failure"
+"database error"
+"out of memory"
+"authentication failed"
+"permission denied"
+"disk space low"
