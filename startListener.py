@@ -58,5 +58,5 @@ def main():
         server_socket.close()   
         print("Connection closed.")  
 
-if __name__ == "__main__": 
-    main()
+if __name__ == "__main__":
+    raise SystemExit(main())
