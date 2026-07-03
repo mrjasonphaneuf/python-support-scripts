@@ -1,7 +1,15 @@
+# This script will take a URL as an argument and check the health of the URL by
+# sending an HTTP request and analyzing the response.
+
 import urllib.request
 import time
+import sys
 
-def check_server_health(url):
+def main(url):
+ # If the user forgot to type http:// or https://, fix it automatically
+    if not url.startswith("http://") and not url.startswith("https://"):
+        url = "https://" + url
+
     print(f"Checking status for: {url}...")
     try:
         start_time = time.time()
@@ -17,19 +25,13 @@ def check_server_health(url):
     except Exception as e:
         print(f" ERROR: Server is DOWN or unreachable. Details: {e}")
 
-# Test the health check function
-check_server_health("https://google.com")
+if __name__ == "__main__":
+    # Check arguments before passing them to any functions
+    if len(sys.argv) != 2:
+        print("Usage: python urlHealthCheck.py <URL>")
+        sys.exit(1) 
 
-# Function to check local disk space and alert if below 10%
-def check_disk_space():
-    import shutil
-    total, used, free = shutil.disk_usage("/")
-    free_percentage = (free / total) * 100
-    
-    print(f"Disk space check: {free_percentage:.2f}% free")
-    
-    if free_percentage < 10:
-        print(" ALERT: Disk space is below 10%! Consider cleaning up.")
-    else:
-        print(" Disk space is sufficient.")
-check_disk_space()
+# Test the health check function
+
+main(sys.argv[1])    
+
