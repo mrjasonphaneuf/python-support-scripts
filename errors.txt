@@ -4,3 +4,4 @@
 "authentication failed"
 "permission denied"
 "disk space low"
+"cpu usage is at 90%"
