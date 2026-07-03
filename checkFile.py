@@ -1,4 +1,7 @@
-# This script will take a directory path and a filename as an argument. It will then check the existence of that directory, then check for the file's existence and whether it is a zero byte file.
+# This script will take a directory path and a filename as an argument.
+# It will then check the existence of that directory, then check for the 
+# file's existence and whether it is a zero byte file.
+
 import os
 import sys  
 
