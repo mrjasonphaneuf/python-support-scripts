@@ -39,4 +39,4 @@ def main():
     print(f"Success: File '{file_path}' exists and is not empty.")
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
