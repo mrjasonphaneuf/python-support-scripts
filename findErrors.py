@@ -65,7 +65,6 @@ def main() -> int:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
 
-    #total_errors = 0
 # Load target errors from errors.txt into a list
     with open("errors.txt", "r") as f:
         target_errors = [line.strip().lower() for line in f if line.strip()]       
@@ -91,7 +90,6 @@ def main() -> int:
         print(f"{error}: {count}")  
 
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
