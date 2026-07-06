@@ -15,3 +15,6 @@ A collection of lightweight Python scripts designed to automate system administr
 
 ### 4. Server Health Check (`urlHealthCheck.py`)
 * **Purpose:** Pings a target URL to verify server responsiveness and records latency data.
+
+### 5. Multi Health Check (`multiHealthCheck.py`)
+* **Purpose:** Checks disk, cpu, memory, swap and io for the local server.
