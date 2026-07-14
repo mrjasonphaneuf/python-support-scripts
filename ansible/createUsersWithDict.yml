@@ -1,0 +1,22 @@
+# ==============================================================================
+# AUTHOR: Jason Phaneuf
+# DATE: July 2026
+# DESCRIPTION: This script creates users from an imported dictionary
+#              
+# ==============================================================================
+---
+- name: Manage system users with external vars
+  hosts: all
+  vars_files:
+    - users.yml
+
+  tasks:
+    - name: Create users from imported dictionary
+      ansible.builtin.user:
+        name: "{{ item.key }}"
+        comment: "{{ item.value.name }}"
+        shell: "{{ item.value.shell }}"
+        groups: "{{ item.value.groups }}"
+        password: "{{ item.value.password }}"
+        append: yes
+      loop: "{{ users | dict2items }}"

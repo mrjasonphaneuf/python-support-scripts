@@ -1,4 +1,20 @@
-# This script will take a directory path and a filename as an argument.
+"""
+System Utility: Check for a file's existence in a given directory
+Author:         Jason Phaneuf
+Created:        July 2026
+GitHub:         ://github.com/mrjasonphaneuf/support-tools
+
+Description:
+    This script will take a directory path and a filename as an argument. It 
+    will then check the existence of that directory, then check for the file's
+    existence and whether it is a zero byte file.
+
+Usage:
+    python checkFile.py -d myDir -f myFilename
+    Example: python multiHealthCheck.py -d logs -f application.log
+""" 
+
+#This script will take a directory path and a filename as an argument.
 # It will then check the existence of that directory, then check for the 
 # file's existence and whether it is a zero byte file.
 
