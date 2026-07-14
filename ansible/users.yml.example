@@ -1,0 +1,6 @@
+# users.yml.example - Copy this to users.yml and fill in the values
+users:
+  - name: johndoe
+    shell: /bin/bash
+    groups: sudo,developers
+    password: "PLACEHOLDER_PASTE_YOUR_VAULTED_HASH_HERE"

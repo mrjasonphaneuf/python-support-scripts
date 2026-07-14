@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
-"""Scan log files for occurrences of various errors defined in errors.txt."""
+"""
+System Utility: Search for various error strings in log files within a given 
+                directory.
+Author:         Jason Phaneuf
+Created:        July 2026
+GitHub:         ://github.com/mrjasonphaneuf/support-tools/python/findErrors.py
+
+Description:
+    This script will scan a directory for log files and search for occurrences 
+    of various error strings as defined in errors.cfg (in the log files that
+    were found).
+
+Usage:
+    python findErrors.py /path/to/logs
+""" 
 
 import argparse
 import os
@@ -66,7 +80,7 @@ def main() -> int:
         return 1
 
 # Load target errors from errors.txt into a list
-    with open("errors.txt", "r") as f:
+    with open("errors.cfg", "r") as f:
         target_errors = [line.strip().lower() for line in f if line.strip()]       
     # Initialize a dictionary tracking counter initialized to 0 for each error type
     # This acts like building a bucket for each item in errors.txt   

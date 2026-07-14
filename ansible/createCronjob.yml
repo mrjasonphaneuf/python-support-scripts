@@ -1,0 +1,22 @@
+# ==============================================================================
+# AUTHOR: Jason Phaneuf
+# DATE: July 2026
+# DESCRIPTION: This simple script creates a cron job
+#              
+# ==============================================================================
+---
+- name: Create a cron job
+  hosts: Lab
+
+  tasks:
+    - name: Schedule cron
+      cron:
+        name: "Run /home/ansible/scripts/jmp.sh"
+        minute: "0"
+        hour:   "10"
+        day:    "*"
+        month:  "*"
+        weekday: "4"
+        user: root
+        job: /home/ansible/scripts/jmp.sh
+      become: yes

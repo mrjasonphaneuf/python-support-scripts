@@ -1,0 +1,44 @@
+# ==============================================================================
+# GLOBAL / SYSTEM FILES
+# ==============================================================================
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+
+# ==============================================================================
+# PYTHON SPECIFIC (Prevents cache, environment, and local log clutter)
+# ==============================================================================
+# Python bytecode cache (compiled files)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments (if you ever use them later)
+.venv/
+venv/
+env/
+
+# Python operational logs (Ignores active log files, but KEEPS your mock logs)
+# This ignores any .log file in the root or subfolders, EXCEPT files in python/logs/
+*.log
+!python/logs/
+
+# Local/Personal Configuration files containing local paths or API tokens
+python/config.local.ini
+python/secrets.json
+
+# ==============================================================================
+# ANSIBLE SPECIFIC (Prevents secret leaks and execution clutter)
+# ==============================================================================
+# Ignore retry files created when a playbook fails
+*.retry
+
+# Ignore sensitive user files (Option 1 from our previous discussion)
+ansible/users.yml
+ansible/credentials.yml
+
+# Ignore temporary ansible vaults or unencrypted password files
+*.vault
+.ansible_vault_pass

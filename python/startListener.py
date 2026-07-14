@@ -1,6 +1,21 @@
-# This program will take two arguments- -p port -t "tcp or udp". It will 
-# open a local port, wait for a connection, and print connection details once
-# a remote connection is made. It will then close the connection.
+#!/usr/bin/env python3
+"""
+System Utility: Start a listener for connectivity testing
+Author:         Jason Phaneuf
+Created:        July 2026
+GitHub:         ://github.com/mrjasonphaneuf/support-tools/python/startListener.py
+
+Description:
+    This script will take two arguments- -p port -t "tcp or udp". It will 
+    open a local port, wait for a connection, and print connection details once
+    a remote connection is made. It will then close the connection.will take a 
+    directory path and a filename as an argument. It will then check the 
+    existence of that directory, then check for the file's existence and whether
+    it is a zero byte file.
+
+Usage:
+    python startListener.py -p port -t tcp
+""" 
 
 import sys
 import socket

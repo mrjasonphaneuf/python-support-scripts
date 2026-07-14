@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
+"""
+System Utility: This script will take 2 arguments: "disk|cpu|swap|mem|io" and a
+                threshold. 
+Author:         Jason Phaneuf
+Created:        July 2026
+GitHub:         ://github.com/mrjasonphaneuf/support-tools/python/multiHealthCheck.py
 
-# This program will take 2 arguments: "disk|cpu|swap|mem|io" and a threshold. 
-# It will run whatever check type is passed in the argument.
+Description:
+    This script will execute a health check based on the criteria passed to it.
+
+Usage:
+    python multiHealthCheck.py disk -w 85
+""" 
 
 import argparse
 import sys
