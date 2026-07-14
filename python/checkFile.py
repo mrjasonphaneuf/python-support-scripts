@@ -3,7 +3,7 @@
 System Utility: Check for a file's existence in a given directory
 Author:         Jason Phaneuf
 Created:        July 2026
-GitHub:         ://github.com/mrjasonphaneuf/support-tools
+GitHub:         ://github.com/mrjasonphaneuf/support-tools/python/checkFile.py
 
 Description:
     This script will take a directory path and a filename as an argument. It 
