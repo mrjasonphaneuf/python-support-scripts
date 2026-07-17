@@ -18,3 +18,6 @@ A collection of lightweight Python scripts designed to automate system administr
 
 ### 5. Multi Health Check (`multiHealthCheck.py`)
 * **Purpose:** Checks disk, cpu, memory, swap and io for the local server.
+
+### 6. Build a package (`createPackage.py`)
+* **Purpose:** Configures and makes a package from source and optionally deploys to a list of servers.
