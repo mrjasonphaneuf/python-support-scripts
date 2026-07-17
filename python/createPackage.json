@@ -1,0 +1,10 @@
+{
+    "comment": "Defines build thresholds, local source directories, and remote target server topologies for createPackage.py.",
+  
+  "src_root": "/usr/local/src",
+  "install_root": "/opt",
+  "ssh_user": "deploy_user",
+  "ssh_key_path": "/home/deploy_user/.ssh/id_rsa",
+  "remote_dest_dir": "/opt",
+  "target_servers": ["10.1.1.25", "10.1.1.26", "10.1.1.27"]
+}
