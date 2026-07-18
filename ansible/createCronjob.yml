@@ -1,8 +1,7 @@
 # ==============================================================================
 # AUTHOR: Jason Phaneuf
 # DATE: July 2026
-# DESCRIPTION: This simple script creates a cron job
-#              
+# DESCRIPTION: Create a cron job#             
 # ==============================================================================
 ---
 - name: Create a cron job
